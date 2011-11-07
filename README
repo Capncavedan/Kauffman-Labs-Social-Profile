@@ -1,9 +1,9 @@
 How to run
 
-First,
+First:
 bundle install
 
-Then,
+Then:
 create a file called 'config.rb' with your Twitter API credentials like so:
 
 Twitter.configure do |config|
@@ -14,6 +14,12 @@ Twitter.configure do |config|
 end
 
 
-then cd into the directory
+then cd into the directory and run:
 
 ruby ./social_profile.rb <twitterhandle>
+
+
+It should open the info.html file for you.
+
+If you just want to see a sample of the output, check here:
+http://port80productions.com/ruby_midwest_hackathon/
