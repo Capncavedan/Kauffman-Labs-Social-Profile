@@ -1,0 +1,19 @@
+How to run
+
+First,
+bundle install
+
+Then,
+create a file called 'config.rb' with your Twitter API credentials like so:
+
+Twitter.configure do |config|
+  config.consumer_key = 'CONSUMER_KEY'
+  config.consumer_secret = 'SECRET'
+  config.oauth_token = 'OAUTH_TOKEN'
+  config.oauth_token_secret = 'MORE_SECRET'
+end
+
+
+then cd into the directory
+
+ruby ./social_profile.rb <twitterhandle>
