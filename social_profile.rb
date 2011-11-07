@@ -14,7 +14,7 @@ var marker = new google.maps.Marker({ position: myLatlng#{tweet.id}, map: map, t
 EOS
 end
 
-htmlout = File.open("/Users/danb/Desktop/socialprofile/info.html", "wb")
+htmlout = File.open("./info.html", "wb")
 htmlout.puts "<html><head></head><body><h1>@#{handle}</h1>";
 
 Twitter.configure do |config|
@@ -27,7 +27,7 @@ end
 require('./config')
 
 client = Twitter::Client.new
-f = File.read('/Users/danb/Desktop/socialprofile/map.html')
+f = File.read('./map.html')
 
 tweets = []
 i = 1
@@ -61,7 +61,7 @@ htmlout.puts "<h2>Hours They <strike>Procrastinate</strike> Tweet</h2><table><tr
 end
 htmlout.puts "</table>"
 
-File.open('/Users/danb/Desktop/socialprofile/map.html', 'wb') do |f|
+File.open('./map.html', 'wb') do |f|
   f.puts html
 end
 
@@ -96,5 +96,5 @@ htmlout.puts "</table>"
 htmlout.puts "<h2>Where They've Tweeted</h2><br/><iframe src='map.html' width='100%' height='100%' /></body></html>"
 
 htmlout.close
-`open /Users/danb/Desktop/socialprofile/info.html`
+`open ./info.html`
 exit 0
